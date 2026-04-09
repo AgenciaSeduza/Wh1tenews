@@ -3,66 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conteúdo em revisão</title>
+  <title>Relato pessoal chama atenção nas redes</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- ✅ TikTok Pixel + Events API -->
-  <script>
-  !function (w, d, t) {
-    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];
-    ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],
-    ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
-    for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
-    ttq.instance=function(t){
-      for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);
-      return e
-    },
-    ttq.load=function(e,n){
-      var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;
-      ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},
-      ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};
-      n=document.createElement("script");
-      n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;
-      e=document.getElementsByTagName("script")[0];
-      e.parentNode.insertBefore(n,e)
-    };
-
-    ttq.load('D7B6ELRC77UC584IPC0G');
-    ttq.page();
-  }(window, document, 'ttq');
-  </script>
-
-  <!-- 🔥 Events API -->
-  <script>
-  (function() {
-    function sendEvent(eventName) {
-      fetch("https://business-api.tiktok.com/open_api/v1.3/event/track/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          pixel_code: "D7B6ELRC77UC584IPC0G",
-          event: eventName,
-          event_id: Date.now().toString(),
-          timestamp: Math.floor(Date.now() / 1000),
-          context: {
-            user: {
-              user_agent: navigator.userAgent
-            },
-            page: {
-              url: window.location.href
-            }
-          }
-        })
-      });
-    }
-
-    // PageView via API
-    sendEvent("PageView");
-  })();
-  </script>
 
   <style>
     * {
@@ -73,60 +16,52 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #f9fafb;
+      background: #f3f4f6;
       color: #111827;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       padding: 24px;
+      display: flex;
+      justify-content: center;
     }
 
     .card {
       width: 100%;
-      max-width: 600px;
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 42px 34px;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+      max-width: 700px;
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
 
     .tag {
-      display: inline-block;
       font-size: 12px;
-      font-weight: 600;
-      color: #374151;
-      background: #e5e7eb;
-      padding: 6px 12px;
-      border-radius: 999px;
-      margin-bottom: 18px;
+      color: #6b7280;
+      margin-bottom: 10px;
     }
 
     h1 {
-      font-size: 30px;
-      font-weight: 700;
-      margin-bottom: 16px;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: #9ca3af;
+      margin-bottom: 20px;
     }
 
     .text {
       font-size: 16px;
       line-height: 1.7;
       color: #374151;
-      margin-bottom: 22px;
-    }
-
-    .info {
-      font-size: 14px;
-      color: #6b7280;
-      margin-bottom: 28px;
+      margin-bottom: 18px;
     }
 
     .btn {
       width: 100%;
-      padding: 16px;
-      font-size: 16px;
-      font-weight: 600;
-      border-radius: 10px;
+      padding: 14px;
+      margin-top: 20px;
+      font-size: 15px;
+      border-radius: 8px;
       border: none;
       background: #e5e7eb;
       color: #9ca3af;
@@ -134,7 +69,7 @@
     }
 
     .footer {
-      margin-top: 26px;
+      margin-top: 30px;
       font-size: 12px;
       color: #9ca3af;
       text-align: center;
@@ -145,32 +80,41 @@
 <body>
 
   <div class="card">
-    <div class="tag">Atualização editorial</div>
+    
+    <div class="tag">Relato | Comportamento</div>
 
-    <h1>Conteúdos passam. Contextos ficam.</h1>
+    <h1>“Ela resolveu de outro jeito”: relato simples viraliza e gera debate online</h1>
+
+    <div class="meta">Por usuário anônimo • Atualizado hoje</div>
 
     <div class="text">
-      Nem toda informação é criada para ser consumida rapidamente.
-      Alguns conteúdos existem apenas como parte de um processo maior,
-      envolvendo curadoria, análise e validação de contexto.
+      Um relato publicado recentemente em um fórum online chamou a atenção de milhares de pessoas ao apresentar uma decisão incomum diante de uma situação cotidiana.
     </div>
 
     <div class="text">
-      Esta página integra uma estrutura de testes, organização e revisão.
-      Nenhuma ação, download ou acesso está disponível neste momento.
+      Segundo o autor, a história envolve uma mulher que, ao enfrentar um problema pessoal, optou por seguir um caminho diferente do esperado. A escolha, descrita como “simples, porém inesperada”, rapidamente gerou curiosidade entre os leitores.
     </div>
 
-    <div class="info">
-      Status atual: conteúdo em preparação.
+    <div class="text">
+      Nos comentários, usuários compartilharam opiniões divididas. Enquanto alguns consideraram a atitude prática e direta, outros apontaram que decisões fora do padrão costumam levantar questionamentos — principalmente quando fogem do comportamento mais comum.
+    </div>
+
+    <div class="text">
+      Especialistas em comportamento destacam que situações como essa refletem mudanças na forma como as pessoas lidam com desafios do dia a dia, priorizando soluções mais individuais e menos influenciadas por expectativas externas.
+    </div>
+
+    <div class="text">
+      Apesar da repercussão, o conteúdo completo não está disponível publicamente neste momento, pois faz parte de um processo de revisão e organização antes de sua publicação definitiva.
     </div>
 
     <button class="btn" disabled>
-      Acesso indisponível
+      Conteúdo indisponível no momento
     </button>
 
     <div class="footer">
-      Página informativa • Ambiente controlado • © 2025
+      Página informativa • Conteúdo em análise • © 2026
     </div>
+
   </div>
 
 </body>
